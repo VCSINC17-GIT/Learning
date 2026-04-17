@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  color: #4B4F58;
+  line-height: 1.65;
+}
+
+
+/* ── Page Title Bar ── */
+.page-title-bar {
+  background: #0170B9;
+  padding: 2.5em 2em;
+  text-align: center;
+  color: #fff;
+}
+
+.page-title-bar h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.page-title-bar p {
+  font-size: 0.95rem;
+  opacity: 0.88;
+}
+
+/* ── Main Content ── */
+.page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5em 1.5em;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 2.5em;
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #0170B9;
+}
+
+/* ── Form ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 0.93rem;
+}
+
+input[type="date"] {
+  padding: 12px 14px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+input[type="date"]:focus {
+  border-color: #0170B9;
+}
+
+/* ── Button ── */
+button {
+  width: 100%;
+  padding: 13px 30px;
+  background: #0170B9;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.3px;
+}
+
+button:hover {
+  background: #3a3a3a;
+}
+
+button:active {
+  opacity: 0.92;
+}
+
+/* ── Result ── */
+.result {
+  margin-top: 28px;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Age Display ── */
+.age-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  gap: 0;
+}
+
+.age-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.age-divider {
+  width: 1px;
+  height: 48px;
+  background: #E5E5E5;
+}
+
+.age-number {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0170B9;
+  line-height: 1;
+}
+
+.age-label {
+  font-size: 0.82rem;
+  color: #4B4F58;
+  margin-top: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Extra Info ── */
+.extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 14px;
+  background: #F5F5F5;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.info-label {
+  color: #4B4F58;
+  font-size: 0.88rem;
+}
+
+.info-value {
+  font-weight: 600;
+  color: #3a3a3a;
+  font-size: 0.9rem;
+}
+
+/* ── Error ── */
+.error {
+  margin-top: 16px;
+  color: #c0392b;
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 10px 14px;
+  background: #fdf2f2;
+  border: 1px solid #f5c6c6;
+  border-radius: 4px;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: #3a3a3a;
+  color: #ccc;
+  text-align: center;
+  padding: 1.25em;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 544px) {
+  .card { padding: 1.75em; }
+  .age-number { font-size: 2rem; }
+}
